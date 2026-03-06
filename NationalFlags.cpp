@@ -34,7 +34,7 @@ void display()
 
     // 1st Quadrant - Flag of Vietnam
 
-    // Red for base of the flag
+    // base of the flag
     glBegin(GL_QUADS);
         glColor3ub(218, 37, 28);
         glVertex2f(1.0f, 1.0f);
@@ -43,7 +43,7 @@ void display()
         glVertex2f(1.0f, 0.1f);
     glEnd();
 
-    // Center star
+    // center star
     glBegin(GL_POLYGON);
         glColor3ub(255, 255, 1);
         glVertex2f(0.55f, 0.6f);
@@ -56,6 +56,63 @@ void display()
         glVertex2f(0.62f, 0.37f);
         glVertex2f(0.57f, 0.5f);
         glVertex2f(0.67f, 0.6f);
+    glEnd();
+
+    // 2nd Quadrant - Flag of Greece
+
+    // base of the flag
+    glBegin(GL_QUADS);
+        glColor3ub(13, 94, 175);
+        glVertex2f(0.0f, 1.0f);
+        glVertex2f(-1.0f, 1.0f);
+        glVertex2f(-1.0f, 0.1f);
+        glVertex2f(0.0f, 0.1f);
+    glEnd();
+
+    // white cross
+    glColor3ub(255, 255, 255);
+
+    glBegin(GL_QUADS);
+        glVertex2f(-0.8f, 1.0f);
+        glVertex2f(-0.7f, 1.0f);
+        glVertex2f(-0.7f, 0.5f);
+        glVertex2f(-0.8f, 0.5f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+        glVertex2f(-1.0f, 0.8f);
+        glVertex2f(-0.5f, 0.8f);
+        glVertex2f(-0.5f, 0.7f);
+        glVertex2f(-1.0f, 0.7f);
+    glEnd();
+
+    // white stripes
+    glBegin(GL_QUADS);
+        glVertex2f(-0.5f, 0.9f);
+        glVertex2f(0.0f, 0.9f);
+        glVertex2f(0.0f, 0.8f);
+        glVertex2f(-0.5f, 0.8f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+        glVertex2f(-0.5f, 0.7f);
+        glVertex2f(0.0f, 0.7f);
+        glVertex2f(0.0f, 0.6f);
+        glVertex2f(-0.5f, 0.6f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+        glVertex2f(-1.0f, 0.5f);
+        glVertex2f(0.0f, 0.5f);
+        glVertex2f(0.0f, 0.4f);
+        glVertex2f(-1.0f, 0.4f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+        glVertex2f(-1.0f, 0.3f);
+        glVertex2f(0.0f, 0.3f);
+        glVertex2f(0.0f, 0.2f);
+        glVertex2f(-1.0f, 0.2f);
     glEnd();
 
     glFlush();
