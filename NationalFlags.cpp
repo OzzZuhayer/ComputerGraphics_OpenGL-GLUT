@@ -93,18 +93,21 @@ void display()
         glVertex2f(0.0f, 0.8f);
         glVertex2f(-0.5f, 0.8f);
     glEnd();
+
     glBegin(GL_QUADS);
         glVertex2f(-0.5f, 0.7f);
         glVertex2f(0.0f, 0.7f);
         glVertex2f(0.0f, 0.6f);
         glVertex2f(-0.5f, 0.6f);
     glEnd();
+
     glBegin(GL_QUADS);
         glVertex2f(-1.0f, 0.5f);
         glVertex2f(0.0f, 0.5f);
         glVertex2f(0.0f, 0.4f);
         glVertex2f(-1.0f, 0.4f);
     glEnd();
+
     glBegin(GL_QUADS);
         glVertex2f(-1.0f, 0.3f);
         glVertex2f(0.0f, 0.3f);
@@ -142,6 +145,51 @@ void display()
     glBegin(GL_LINES);
         glVertex2f(-0.9f, -0.3f);
         glVertex2f(-0.7f, -0.3f);
+    glEnd();
+
+    glLineWidth(1.0f);
+    glColor3ub(255, 255, 255);
+
+    // 4th Quadrant - Flag of Isr@el
+
+    // base of the flag
+    glBegin(GL_QUADS);
+        glVertex2f(0.0f, -0.1f);
+        glVertex2f(1.0f, -0.1f);
+        glVertex2f(1.0f, -1.0f);
+        glVertex2f(0.0f, -1.0f);
+    glEnd();
+
+    // blue stripes
+    glColor3ub(0, 56, 149);
+
+    glBegin(GL_QUADS);
+        glVertex2f(0.0f, -0.1f);
+        glVertex2f(1.0f, -0.1f);
+        glVertex2f(1.0f, -0.2f);
+        glVertex2f(0.0f, -0.2f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+        glVertex2f(0.0f, -0.9f);
+        glVertex2f(0.0f, -1.0f);
+        glVertex2f(1.0f, -1.0f);
+        glVertex2f(1.0f, -0.9f);
+    glEnd();
+
+    // triangles
+    glLineWidth(8.5f);
+
+    glBegin(GL_LINE_LOOP);
+        glVertex2f(0.3f, -0.4f);
+        glVertex2f(0.5f, -0.7f);
+        glVertex2f(0.7f, -0.4f);
+    glEnd();
+
+    glBegin(GL_LINE_LOOP);
+        glVertex2f(0.3f, -0.6f);
+        glVertex2f(0.7f, -0.6f);
+        glVertex2f(0.5f, -0.3f);
     glEnd();
 
     glLineWidth(1.0f);
