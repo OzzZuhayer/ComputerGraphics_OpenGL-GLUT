@@ -93,27 +93,58 @@ void display()
         glVertex2f(0.0f, 0.8f);
         glVertex2f(-0.5f, 0.8f);
     glEnd();
-
     glBegin(GL_QUADS);
         glVertex2f(-0.5f, 0.7f);
         glVertex2f(0.0f, 0.7f);
         glVertex2f(0.0f, 0.6f);
         glVertex2f(-0.5f, 0.6f);
     glEnd();
-
     glBegin(GL_QUADS);
         glVertex2f(-1.0f, 0.5f);
         glVertex2f(0.0f, 0.5f);
         glVertex2f(0.0f, 0.4f);
         glVertex2f(-1.0f, 0.4f);
     glEnd();
-
     glBegin(GL_QUADS);
         glVertex2f(-1.0f, 0.3f);
         glVertex2f(0.0f, 0.3f);
         glVertex2f(0.0f, 0.2f);
         glVertex2f(-1.0f, 0.2f);
     glEnd();
+
+    // 3rd Quadrant - Flag of Tonga
+
+    // base of the flag
+    glColor3ub(194, 0, 0);
+    glBegin(GL_QUADS);
+        glVertex2f(-1.0f, -0.1f);
+        glVertex2f(0.0f, -0.1f);
+        glVertex2f(0.0f, -1.0f);
+        glVertex2f(-1.0f, -1.0f);
+    glEnd();
+
+    // white portion
+    glColor3ub(255, 255, 255);
+    glBegin(GL_QUADS);
+        glVertex2f(-0.6f, -0.1f);
+        glVertex2f(-1.0f, -0.1f);
+        glVertex2f(-1.0f, -0.5f);
+        glVertex2f(-0.6f, -0.5f);
+    glEnd();
+
+    // red cross
+    glColor3ub(194, 0, 0);
+    glLineWidth(18.0f);
+    glBegin(GL_LINES);
+        glVertex2f(-0.8f, -0.2f);
+        glVertex2f(-0.8f, -0.4f);
+    glEnd();
+    glBegin(GL_LINES);
+        glVertex2f(-0.9f, -0.3f);
+        glVertex2f(-0.7f, -0.3f);
+    glEnd();
+
+    glLineWidth(1.0f);
 
     glFlush();
 }
