@@ -17,6 +17,7 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
     glPointSize(5.0);
 
+    // Quadrant borders
     glColor3ub(4, 255, 80);
 
     glBegin(GL_LINES);
@@ -27,6 +28,34 @@ void display()
     glBegin(GL_LINES);
         glVertex2f(1.0f, 0.0f);
         glVertex2f(-1.0f, 0.0f);
+    glEnd();
+
+    glColor3ub(255, 255, 255);
+
+    // 1st Quadrant - Flag of Vietnam
+
+    // Red for base of the flag
+    glBegin(GL_QUADS);
+        glColor3ub(218, 37, 28);
+        glVertex2f(1.0f, 1.0f);
+        glVertex2f(0.0f, 1.0f);
+        glVertex2f(0.0f, 0.1f);
+        glVertex2f(1.0f, 0.1f);
+    glEnd();
+
+    // Center star
+    glBegin(GL_POLYGON);
+        glColor3ub(255, 255, 1);
+        glVertex2f(0.55f, 0.6f);
+        glVertex2f(0.5f, 0.7f);
+        glVertex2f(0.45f, 0.6f);
+        glVertex2f(0.32f, 0.6f);
+        glVertex2f(0.42f, 0.5f);
+        glVertex2f(0.37f, 0.37f);
+        glVertex2f(0.5f, 0.45f);
+        glVertex2f(0.62f, 0.37f);
+        glVertex2f(0.57f, 0.5f);
+        glVertex2f(0.67f, 0.6f);
     glEnd();
 
     glFlush();
